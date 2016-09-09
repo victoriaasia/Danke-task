@@ -75,7 +75,8 @@
     color: #262626;
     text-transform: uppercase;
     padding: 6px 25px 5px 15px;
-    position: relative; }
+    position: relative;
+    transition: all 1s ease; }
     .container-header .lk-btn::after {
       content: "";
       position: absolute;
@@ -84,6 +85,8 @@
       height: 6px;
       top: 8px;
       right: 13px; }
+    .container-header .lk-btn:hover {
+      border-color: rgba(73, 182, 137, 0.8); }
 
 .link, .hamburger, .hamburger li {
   transition: all 0.3s ease-out; }
@@ -111,28 +114,29 @@ nav {
 
 .hamburger {
   display: none;
-  width: 30px;
-  height: 35px;
-  padding: 30px; }
+  width: 35px;
+  height: 30px;
+  padding-top: 6px;
+  margin: 0 auto; }
   .hamburger li {
     list-style: none;
-    margin: 5px 0;
-    width: 30px;
+    margin: 4px 0;
+    width: 35px;
     height: 3px;
     background: #5e5e5e; }
     .hamburger li:nth-child(2) {
-      width: 20px; }
-    .hamburger li:last-child {
       width: 25px; }
+    .hamburger li:last-child {
+      width: 30px; }
 
 .on {
   transform: rotate(90deg); }
   .on li {
     background: #969696; }
     .on li:nth-child(2) {
-      width: 30px; }
+      width: 35px; }
     .on li:first-child {
-      width: 25px; }
+      width: 30px; }
 
 @media only screen and (max-width: 996px) {
   .hamburger {
@@ -175,7 +179,24 @@ nav {
 
   .logo-img {
     background-image: url(../img/logo-min.png) !important;
-    background-position: center !important; } }
+    background-position: center !important; }
+
+  .cart {
+    position: relative; }
+    .cart::after, .cart::before {
+      content: "";
+      position: absolute;
+      border-right: 1px solid #ebebeb;
+      height: 42px;
+      width: 2px;
+      top: -10px; }
+    .cart::before {
+      left: -5px; }
+    .cart::after {
+      right: -5px; }
+
+  .container-header header > div {
+    margin: 0 5px; } }
 @media only screen and (min-width: 481px) {
   .phone {
     opacity: 0;
@@ -190,7 +211,8 @@ nav {
   color: #262626;
   text-transform: uppercase;
   position: relative;
-  white-space: nowrap; }
+  white-space: nowrap;
+  transition: all 1s ease; }
   .city .city-select::after {
     content: "";
     position: absolute;
@@ -200,6 +222,8 @@ nav {
     top: 13px;
     right: 13px;
     background-repeat: no-repeat; }
+  .city .city-select:hover {
+    background-color: rgba(235, 235, 235, 0.5); }
 
 .search {
   width: 100%;
@@ -211,9 +235,9 @@ nav {
     font-size: 12px;
     color: #969696;
     display: inline-block;
+    padding-right: 50px;
     border: 0;
     outline: none;
-    padding-right: 60px;
     width: 0px;
     position: absolute;
     top: 11px;
@@ -227,6 +251,7 @@ nav {
   .search input[type="text"]:focus {
     width: 100%;
     padding: 3px 20px;
+    padding-right: 50px;
     z-index: 1;
     color: #262626;
     background-color: #ebebeb;

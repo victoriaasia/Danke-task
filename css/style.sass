@@ -75,8 +75,23 @@ a
       display: flex
       flex-direction: column
       justify-content: space-between
+      position: relative
+      &::before
+        content: ''
+        position: absolute
+        border-top: 1px solid $lightGray
+        width: 100%
+        height: 2px
+        left: 0
+        bottom: 89px
       .price
         justify-content: flex-end
+      .karl
+        background-color: $white
+        padding: 0 10px
+        position: relative
+        left: -10px
+
     &-img
       height: 100%
       position: relative
